@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_awesome_select/flutter_awesome_select.dart';
+import 'package:flutter_awesome_select_clone/flutter_awesome_select.dart';
 import '../widgets/icon_badge.dart';
 import '../choices.dart' as choices;
 
@@ -56,7 +56,7 @@ class _FeaturesModalHeaderState extends State<FeaturesModalHeader> {
             type: S2ModalType.popupDialog,
             headerStyle: S2ModalHeaderStyle(
               backgroundColor: Theme.of(context).primaryColor,
-              textStyle: Theme.of(context).primaryTextTheme.headline6,
+              textStyle: Theme.of(context).primaryTextTheme.titleLarge,
               centerTitle: true,
               elevation: 0,
             ),

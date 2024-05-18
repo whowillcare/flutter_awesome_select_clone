@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart' show ListEquality;
 import 'package:flutter/material.dart';
-import 'package:flutter_awesome_select/flutter_awesome_select.dart';
+import 'package:flutter_awesome_select_clone/flutter_awesome_select.dart';
 import '../state/choices.dart';
 import '../state/filter.dart';
 import '../choices_resolver.dart';
@@ -138,8 +138,8 @@ abstract class S2State<T> extends State<SmartSelect<T>> {
         backgroundColor:
             widget.modalConfig.isFullPage != true ? theme.cardColor : null,
         textStyle: widget.modalConfig.isFullPage != true
-            ? theme.textTheme.headline6
-            : theme.primaryTextTheme.headline6,
+            ? theme.textTheme.titleMedium
+            : theme.primaryTextTheme.titleMedium,
         iconTheme:
             widget.modalConfig.isFullPage != true ? theme.iconTheme : null,
         errorStyle: const TextStyle(

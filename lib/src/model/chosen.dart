@@ -9,7 +9,7 @@ typedef S2MultiSelectedResolver<T> = Future<List<S2Choice<T>>?> Function(
     List<T>? value);
 
 /// Chosen data class
-abstract class S2ChosenData<T> {
+mixin S2ChosenDataMixin<T> {
   /// Returns the choice item(s)
   get choice;
 
@@ -51,6 +51,10 @@ abstract class S2ChosenData<T> {
 
   /// Return a [Text] widget from [toString]
   Widget toWidget() => Text(toString());
+}
+
+abstract class S2ChosenData<T> with S2ChosenDataMixin<T> {
+
 }
 
 /// Chosen data for single choice widget
@@ -207,7 +211,7 @@ class S2MultiChosen<T> extends S2ChosenData<T> with S2MultiChosenData<T> {
   }
 }
 
-abstract class S2ChosenNotifier<T> extends ChangeNotifier with S2ChosenData<T> {
+abstract class S2ChosenNotifier<T> extends ChangeNotifier with S2ChosenDataMixin<T> {
   /// A Function used to validate the selection(s)
   covariant var validation;
 
@@ -257,7 +261,7 @@ mixin S2MultiChosenNotifier<T> on S2ChosenNotifier<T> {
 }
 
 /// State of the selected choice
-abstract class S2Selected<T> extends S2ChosenNotifier<T> {
+abstract class S2Selected<T> extends S2ChosenNotifier<T> implements S2ChosenData<T>{
   /// A `String` to return in `toString` if the `title` is empty
   String? placeholder;
 
@@ -466,7 +470,7 @@ class S2MultiSelected<T> extends S2Selected<T> with S2MultiChosenData<T> {
   }
 }
 
-abstract class S2Selection<T> extends S2ChosenNotifier<T> {
+abstract class S2Selection<T> extends S2ChosenNotifier<T> implements S2ChosenData<T>{
   /// The initial selection
   covariant var initial;
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_awesome_select/flutter_awesome_select.dart';
+import 'package:flutter_awesome_select_clone/flutter_awesome_select.dart';
 
 /// Default trigger/tile widget
 class S2Tile<T> extends StatelessWidget {
@@ -213,7 +213,7 @@ class S2Tile<T> extends StatelessWidget {
         return DefaultTextStyle.merge(
           child: isLoading == true ? _loadingWidget : value,
           style: isError == true
-              ? TextStyle(color: Theme.of(context).errorColor)
+              ? TextStyle(color: Theme.of(context).colorScheme.error)
               : null,
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
