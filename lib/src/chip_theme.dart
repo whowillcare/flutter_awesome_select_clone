@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class S2ChipTheme extends StatelessWidget {
   /// Default constructor
   const S2ChipTheme({
-    Key? key,
+    super.key,
     required this.child,
     this.color,
     this.outlined = false,
@@ -14,7 +14,7 @@ class S2ChipTheme extends StatelessWidget {
     this.shape,
     this.labelStyle,
     this.selected = false,
-  }) : super(key: key);
+  });
 
   /// The child widget
   final Widget child;

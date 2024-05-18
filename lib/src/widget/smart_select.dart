@@ -95,7 +95,7 @@ class SmartSelect<T> extends StatefulWidget {
 
   /// Default constructor
   SmartSelect({
-    Key? key,
+    super.key,
     this.title,
     this.placeholder,
     required this.isMultiChoice,
@@ -147,8 +147,7 @@ class SmartSelect<T> extends StatefulWidget {
         assert(
           choiceItems != null || choiceLoader != null,
           '`choiceItems` and `choiceLoader` can\'t be both null',
-        ),
-        super(key: key);
+        );
 
   /// Constructor for single choice
   ///

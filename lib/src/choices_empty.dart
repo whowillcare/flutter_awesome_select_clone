@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 /// Default widget for empty choices list
 class S2ChoicesEmpty extends StatelessWidget {
   /// Default constructor
-  const S2ChoicesEmpty({Key? key}) : super(key: key);
+  const S2ChoicesEmpty({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const <Widget>[
+        children: <Widget>[
           Icon(
             Icons.search,
             color: Colors.grey,

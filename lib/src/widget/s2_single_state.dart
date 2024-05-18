@@ -1,5 +1,5 @@
 import 'package:collection/collection.dart'
-    show IterableExtension, ListEquality;
+    show IterableExtension;
 import 'package:flutter/material.dart';
 import 'package:flutter_awesome_select_clone/flutter_awesome_select.dart';
 
