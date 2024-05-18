@@ -1,3 +1,7 @@
+## [7.5.0]
+* Clone from existing flutter_awesome_select 6.5.0
+* Upgrade all obsoleted and old references prior to 3.22.0, especially those related to ThemeData
+
 ## [Next]
 * Fixes issue #3 list items are not refreshed when the items’ source e.g. a change notifier Provider sends an updated list.
 * Corrects spelling mistakes in documentation.
